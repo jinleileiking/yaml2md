@@ -8,10 +8,12 @@ require 'liquid'
 
 
 def get_val(input_item)
+	return unless input_item
 	@constants.each do |item| 
 		if input_item["name"] == item["name"]
-			input_item["require"] = item["require"]
-			input_item["comment"] = item["comment"]
+			input_item["require"] = item["require"] if item["require"]
+			input_item["comment"] = item["comment"] if item["comment"]
+			input_item["type"] = item["type"] if item["type"]
 		end
 	end
 end
@@ -30,8 +32,7 @@ unless opts[:file]
     exit
 end
 
-# puts File.basename opts[:file], ".yaml"
-
+# puts File.basename opts[:file], ".yaml" 
 data = YAML.load_file(opts[:file])
 
 @constants = YAML.load_file('constant.yaml')
@@ -39,12 +40,16 @@ data = YAML.load_file(opts[:file])
 data["action"] = File.basename opts[:file], ".yaml"
 
 
-data["input"].each do |item| 
-	get_val(item)
+if data["input"]
+	data["input"].each do |item| 
+		get_val(item)
+	end
 end
 
-data["output"].each do |item| 
-	get_val(item)
+if data["output"]
+	data["output"].each do |item| 
+		get_val(item)
+	end
 end
 
 data["detail"] = data["brief"] unless data["detail"]
