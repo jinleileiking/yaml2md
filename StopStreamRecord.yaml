@@ -1,0 +1,10 @@
+brief: 开始小视频录制
+method: put
+version: 2017-01-01
+input:
+    - name : UniqueName 
+    - name : App
+    - name : Pubdomain
+    - name : Stream
+output:
+    - name : RecID

@@ -1,0 +1,10 @@
+brief: 设置录制视频定时任务
+method: put
+version: 2017-01-01
+input:
+    - name : UniqueName 
+    - name : App
+    - name : Pubdomain
+    - name : Stream
+output:
+    - name : RecID
