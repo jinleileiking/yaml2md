@@ -11,9 +11,22 @@ def get_val(input_item)
 	return unless input_item
 	@constants.each do |item| 
 		if input_item["name"] == item["name"]
-			input_item["require"] = item["require"] if item["require"]
-			input_item["comment"] = item["comment"] if item["comment"]
-			input_item["type"] = item["type"] if item["type"]
+
+            # keys = ["require", "comment", "type", "must"]
+            keys = item.keys.reject{|key| key == "name"}
+
+            keys.each do |key|
+                next if input_item[key]
+			    input_item[key] = item[key] if item[key]
+            end
+            # input_item.reject {|key| key == "name"}.each do |key, val|
+            #     next if keys.include? key
+			#     input_item[key] = item[key] if item[key]
+            # end
+			# input_item["require"] = item["require"] if item["require"]
+			# input_item["comment"] = item["comment"] if item["comment"]
+			# input_item["type"] = item["type"] if item["type"]
+			# input_item["must"] = item["must"] if item["must"] 
 		end
 	end
 end

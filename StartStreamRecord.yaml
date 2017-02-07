@@ -6,5 +6,7 @@ input:
     - name : App
     - name : Pubdomain
     - name : Stream
+    - name : Ks3FullPathMp4
+    - name : Ks3FileNameM3U8
 output:
     - name : RecID

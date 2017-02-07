@@ -7,3 +7,11 @@
 - name : RecID
   require : '[a-zA-Z0-9-]'
   comment : 录像id
+- name : Ks3FullPathMp4
+  comment : ks3存储全路径，包括目录和文件名，命名方式:{StreamName}{UnixTime}{YY}{MM}{DD}{HH}{mm}{ss}
+  must : N
+  default : 
+- name : Ks3FileNameM3U8
+  comment : ks3 m3u8文件名，命名方式:{StreamName}{UnixTime}{YY}{MM}{DD}{HH}{mm}{ss}
+  must : N
+
