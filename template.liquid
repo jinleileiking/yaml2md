@@ -10,14 +10,14 @@
 | --- | --- | --- | --- | --- | --- |
 | Action | String | Y | {{data.action}} | | |
 | Version | String | Y | {{data.version}} | | |
-{% for param in data.input %}| {{param.name}} | {{param.type | default: "String" }}  | {{param.must | default: "Y" }} | {{param.require | default: "N/A" }} | {{param.default | default: "N/A" }} | {{param.comment | default: ""}} | 
+{% for param in data.input %}| {{param.name}} | {{param.type | default: "String" }}  | {{param.must | default: "Y" }} | {{param.require | default: "" }} | {{param.default | default: "" }} | {{param.comment | default: ""}} | 
 {% endfor %}
 
 ## 返回参数
 
-| 名称 | 类型 | 描述 |
-| --- | --- | --- |
-{% for param in data.output %}| {{param.name}} | {{param.type | default: "String" }}  | {{param.must | default: "Y" }} | {{param.require | default: "N/A" }} | {{param.default | default: "N/A" }} | {{param.comment | default: ""}} | 
+| 名称 | 类型 | 是否必须 |  描述 |
+| --- | --- | --- |  --- |
+{% for param in data.output %}| {{param.name}} | {{param.type | default: "String" }}  | {{param.must | default: "Y" }} || {{param.comment | default: ""}} | 
 {% endfor %}
 
 

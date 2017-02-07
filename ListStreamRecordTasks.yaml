@@ -1,0 +1,43 @@
+brief: 获取某个流的录像任务情况
+method: get
+version: 2017-01-01
+input:
+    - name : UniqueName 
+    - name : App
+    - name : Pubdomain
+    - name : Stream
+    - name : RecStatus
+      must : N
+      default : 0 全部
+    - name : RecType
+      must : N
+      default : 0 全部
+    - name : OrderTime
+      must : N
+      default : 0 从最新的开始
+    - name : Marker
+      must : N
+    - name : Limit
+      must : N
+    - name : StartUnixTime
+      must : N
+output:
+    - name : UniqueName 
+    - name : App
+    - name : Pubdomain
+    - name : Stream
+    - name : OrderTime
+    - name : RecType
+    - name : Total
+    - name : Count
+    - name : Recs
+      type : Array
+      comment : 返回任务数组，具体见下
+    - name : RecID
+    - name : RecStatus
+    - name : RecType
+      comment : 这个任务的录制类型
+    - name : StartUnixTime
+    - name : EndUnixTime
+    - name : Ks3FullPathMp4
+    - name : Ks3FullPathM3u8

@@ -8,10 +8,33 @@
   require : '[a-zA-Z0-9-]'
   comment : 录像id
 - name : Ks3FullPathMp4
+  comment : ks3存储全路径，包括目录和文件名，命名方式:{StreamName}{UnixTime}{YY}{MM}{DD}{HH}{mm}{ss}{vdoid}
+  default : 
+- name : Ks3FullPathM3u8
   comment : ks3存储全路径，包括目录和文件名，命名方式:{StreamName}{UnixTime}{YY}{MM}{DD}{HH}{mm}{ss}
-  must : N
   default : 
 - name : Ks3FileNameM3U8
   comment : ks3 m3u8文件名，命名方式:{StreamName}{UnixTime}{YY}{MM}{DD}{HH}{mm}{ss}
-  must : N
+- name : RecStatus
+  comment : 录像状态 1--计划将要录制任务，2--实时正在录制的任务，3--已经完成的录制任务<成功/失败>，0--全部
+- name : RecType
+  comment : 录像类型 0:全部 1:定时 2:小视频
+- name : Marker
+  comment : 起始位置
+- name : Limit
+  comment : 限制数量
+- name : StartUnixtime
+  comment : 起始时间
+- name : EndUnixtime
+  comment : 结束时间
+- name : Total
+  type : Int
+  comment : 总数
+- name : Count
+  type : Int
+  comment : 数量
+- name : OrderTime
+  type : Int
+  comment : 排序类型 0:从前向后 1:从后向前
+
 

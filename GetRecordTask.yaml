@@ -1,0 +1,16 @@
+brief: 获取某个任务情况
+method: get
+version: 2017-01-01
+input:
+    - name : RecID 
+output:
+    - name : UniqueName 
+    - name : App
+    - name : Pubdomain
+    - name : Stream
+    - name : RecStatus
+    - name : RecType
+    - name : StartUnixTime
+    - name : EndUnixTime
+    - name : Ks3FullPathMp4
+    - name : Ks3FullPathM3u8

@@ -1,4 +1,4 @@
-brief: 删除录制视频定时任务
+brief: 设置录制视频定时任务
 method: put
 version: 2017-01-01
 input:
@@ -8,5 +8,7 @@ input:
     - name : Stream
     - name : StartUnixTime
     - name : EndUnixTime
+    - name : Ks3FullPathMp4
+    - name : Ks3FileNameM3U8
 output:
     - name : RecID
