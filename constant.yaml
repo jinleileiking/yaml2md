@@ -24,8 +24,10 @@
 - name : Limit
   comment : 限制数量
 - name : StartUnixtime
+  type : Int
   comment : 起始时间
 - name : EndUnixtime
+  type : Int
   comment : 结束时间
 - name : Total
   type : Int

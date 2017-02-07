@@ -1,0 +1,31 @@
+brief: 创建配置
+method: post
+version: 2017-01-01
+input:
+    - name : UniqueName 
+    - name : App
+    - name : Pubdomain
+    - name : HlsEnable
+      must : N
+      comment : 是否使能hls, 这些参数至少带一个
+    - name : Mp4VodEnable
+      must : N
+    - name : HlsVodEnable
+      must : N
+    - name : HlsBucket
+      must : N
+    - name : Mp4Bucket
+      must : N
+    - name : SnapBucket
+      must : N
+    - name : SnapEnable
+      must : N
+    - name : SplitFileNameM3U8
+      must : N
+    - name : LiveFileNameM3U8
+      must : N
+    - name : SplitFullPathMP4
+      must : N
+    - name : LiveFullPathMP4
+      must : N
+output:
