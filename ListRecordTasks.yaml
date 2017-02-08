@@ -1,11 +1,10 @@
 brief: 获取app/pubhost的录像任务情况
-method: get
 version: 2017-01-01
 input:
     - name : UniqueName 
     - name : App
     - name : Pubdomain
-      must : N
+      # must : N  目前必须带，后续做可以不带的
     - name : RecType
       must : N
       default : 0 全部

@@ -8,13 +8,13 @@
   require : '[a-zA-Z0-9-]'
   comment : 录像id
 - name : Ks3FullPathMp4
-  comment : ks3存储全路径，包括目录和文件名，命名方式:{StreamName}{UnixTime}{YY}{MM}{DD}{HH}{mm}{ss}{vdoid}
+  comment : ks3存储全路径，包括目录和文件名，命名方式:{App}{StreamName}{UnixTime}{YY}{MM}{DD}{HH}{mm}{ss}{vdoid}
   default : 
 - name : Ks3FullPathM3u8
   comment : ks3存储全路径，包括目录和文件名，命名方式:{StreamName}{UnixTime}{YY}{MM}{DD}{HH}{mm}{ss}
   default : 
-- name : Ks3FileNameM3U8
-  comment : ks3 m3u8文件名，命名方式:{StreamName}{UnixTime}{YY}{MM}{DD}{HH}{mm}{ss}
+- name : LiveFileNameM3U8
+  comment : 直播实时更新的m3u8文件名，参加命名方式，必须带vdoid
 - name : RecStatus
   comment : 录像状态 1--计划将要录制任务，2--实时正在录制的任务，3--已经完成的录制任务<成功/失败>，0--全部
 - name : RecType

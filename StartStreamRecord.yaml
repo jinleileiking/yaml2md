@@ -1,12 +1,16 @@
 brief: 开始小视频录制
-method: put
+method: post
 version: 2017-01-01
 input:
     - name : UniqueName 
     - name : App
     - name : Pubdomain
     - name : Stream
-    - name : Ks3FullPathMp4
+    - name : Mp4VodEnable
+      must : N
     - name : Ks3FileNameM3U8
+      must : N
+    - name : Ks3FullPathMP4
+      must : N
 output:
     - name : RecID

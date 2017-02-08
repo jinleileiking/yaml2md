@@ -1,0 +1,8 @@
+brief: 获取域名标识
+method: get
+version: 2017-01-01
+input:
+output:
+    - name : UniqueNames
+      type : String Array
+      comment : 返回UniqueName数组

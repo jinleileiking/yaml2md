@@ -1,8 +1,6 @@
 brief: 添加域名标识
 detail: 添加域名标识
-method: put
+method: post
 version: 2017-01-01
 input:
     - name : UniqueName 
-      require : '[a-zA-Z0-9-]'
-      comment : 要新加的域名标识

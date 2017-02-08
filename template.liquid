@@ -17,7 +17,7 @@
 
 | 名称 | 类型 | 是否必须 |  描述 |
 | --- | --- | --- |  --- |
-{% for param in data.output %}| {{param.name}} | {{param.type | default: "String" }}  | {{param.must | default: "Y" }} || {{param.comment | default: ""}} | 
+{% for param in data.output %}| {{param.name}} | {{param.type | default: "String" }}  | {{param.must | default: "Y" }} | {{param.comment | default: ""}} | 
 {% endfor %}
 
 

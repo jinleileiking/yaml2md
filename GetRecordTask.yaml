@@ -13,4 +13,4 @@ output:
     - name : StartUnixTime
     - name : EndUnixTime
     - name : Ks3FullPathMp4
-    - name : Ks3FullPathM3u8
+    - name : Ks3FileNameM3u8

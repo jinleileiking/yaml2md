@@ -1,0 +1,22 @@
+brief: 更新截图配置
+method: post
+version: 2017-01-01
+input:
+    - name : UniqueName 
+    - name : App
+    - name : Pubdomain
+      must : N
+    - name : SnapBucket
+      must : N
+      comment : 是否使能hls, 这些参数至少带一个
+    # - name : SnapFullPath
+    #   must : N
+    - name : SnapInterval
+      must : N
+    - name : SnapCover
+      must : N
+    # - name : SteamRecordCallbackURL
+    #   must : N
+    # - name : LiveRecordCallbackURL
+    #   must : N
+output:

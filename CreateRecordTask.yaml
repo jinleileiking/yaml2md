@@ -8,7 +8,11 @@ input:
     - name : Stream
     - name : StartUnixTime
     - name : EndUnixTime
-    - name : Ks3FullPathMp4
+    - name : Mp4VodEnable
+      must : N
     - name : Ks3FileNameM3U8
+      must : N
+    - name : Ks3FullPathMP4
+      must : N
 output:
     - name : RecID

@@ -53,6 +53,15 @@ data = YAML.load_file(opts[:file])
 data["action"] = File.basename opts[:file], ".yaml"
 
 
+
+filename = File.basename opts[:file], ".yaml"
+name_split = filename.split /(?=[A-Z])/
+
+if name_split[0] == "List" or name_split[0] == "Get"
+    data["method"] = "GET" unless data["method"]
+end
+data["method"] = "POST" unless data["method"]
+
 if data["input"]
 	data["input"].each do |item| 
 		get_val(item)
@@ -64,6 +73,8 @@ if data["output"]
 		get_val(item)
 	end
 end
+
+
 
 data["detail"] = data["brief"] unless data["detail"]
 

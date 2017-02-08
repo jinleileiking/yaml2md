@@ -1,0 +1,29 @@
+brief: 关闭录像配置
+method: post
+version: 2017-01-01
+input:
+    - name : UniqueName 
+    - name : App
+    - name : Pubdomain
+    # - name : HlsVodEnable
+    #   must : N
+    #   comment : 是否使能hls, 这些参数至少带一个
+    # - name : Mp4VodEnable
+    #   must : N
+    # - name : HlsBucket
+    #   must : N
+    # - name : Mp4Bucket
+    #   must : N
+    # - name : SplitFileNameM3U8
+    #   must : N
+    # # - name : LiveFileNameM3U8
+    # #   must : N
+    # - name : SplitFullPathMP4
+    #   must : N
+    # - name : LiveFullPathMP4
+    #   must : N
+    # - name : SteamRecordCallbackURL
+    #   must : N
+    # - name : LiveRecordCallbackURL
+    #   must : N
+output:

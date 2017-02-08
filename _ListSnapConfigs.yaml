@@ -7,9 +7,9 @@ input:
     - name : Pubdomain
       comment : 只有带推流域名的情况，才会返回流级别的配置
       must : N
-    - name : Stream
-      must : N
-      comment : 后续实现
+    # - name : Stream
+    #   must : N
+    #   comment : 后续实现
 output:
     - name : PubdomainConfigs
       type : Array

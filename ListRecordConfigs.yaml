@@ -1,0 +1,24 @@
+brief: 获取配置
+method: get
+version: 2017-01-01
+input:
+    - name : UniqueName 
+    - name : App
+    - name : Pubdomain
+      comment : 只有带推流域名的情况，才会返回流级别的配置
+      must : N
+    # - name : Stream
+    #   must : N
+    #   comment : 后续实现
+output:
+    - name : PubdomainConfigs
+      type : Array
+      comment : 推流域名的配置, 数组内容见下
+    - name : App
+    - name : Pubdomain
+    - name : Mp4VodEnable
+    - name : HlsVodEnable
+    - name : HlsBucket
+    - name : Mp4Bucket
+    - name : MergeEnable
+    - name : LiveFileNameM3U8
