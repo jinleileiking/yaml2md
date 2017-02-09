@@ -4,7 +4,7 @@ input:
     - name : UniqueName 
     - name : App
     - name : Pubdomain
-      # must : N  目前必须带，后续做可以不带的
+    - name : Stream
     - name : RecType
       must : N
       default : 0 全部
@@ -16,6 +16,8 @@ input:
     - name : Limit
       must : N
     - name : StartUnixTime
+      must : N
+    - name : EndUnixTime
       must : N
 output:
     - name : UniqueName 

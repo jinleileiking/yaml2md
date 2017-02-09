@@ -13,11 +13,13 @@
 | UniqueName | String  | Y | [a-zA-Z0-9-] |  | 域名标识 | 
 | App | String  | Y | [a-zA-Z0-9-] |  | app | 
 | Pubdomain | String  | Y |  |  |  | 
+| Stream | String  | Y |  |  |  | 
 | RecType | String  | N |  | 0 全部 | 录像类型 0:全部 1:定时 2:小视频 | 
 | OrderTime | Int  | N |  | 0 从最新的开始 | 排序类型 0:从前向后 1:从后向前 | 
 | Marker | String  | N |  |  | 起始位置 | 
 | Limit | String  | N |  |  | 限制数量 | 
 | StartUnixTime | String  | N |  |  |  | 
+| EndUnixTime | String  | N |  |  |  | 
 
 
 ## 返回参数
