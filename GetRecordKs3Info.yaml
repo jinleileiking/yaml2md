@@ -1,0 +1,13 @@
+brief: 获取流生成ks3路径的文件名
+method: get
+version: 2017-01-01
+input:
+    - name : UniqueName 
+    - name : App
+    - name : Pubdomain
+    - name : Stream
+    - name : UnixTime
+    - name : Vdoid
+output:
+    - name : LiveFileNameM3U8
+    - name : PhraseFileNameMp4
