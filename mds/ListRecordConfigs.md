@@ -1,8 +1,8 @@
-# 获取配置(ListRecordConfigs)
+# 获取域名级别配置(ListRecordConfigs)
 
 ## 描述
 
-获取配置
+获取域名级别配置
 
 ## 请求参数
 
@@ -12,7 +12,7 @@
 | Version | String | Y | 2017-01-01 | | |
 | UniqueName | String  | Y | [a-zA-Z0-9-] |  | 域名标识 | 
 | App | String  | Y | [a-zA-Z0-9-] |  | app | 
-| Pubdomain | String  | N |  |  | 只有带推流域名的情况，才会返回流级别的配置 | 
+| Pubdomain | String  | Y |  |  |  | 
 
 
 ## 返回参数

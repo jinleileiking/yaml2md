@@ -1,4 +1,4 @@
-brief: 获取app/pubhost的录像任务情况
+brief: 获取流级别的录像任务情况
 version: 2017-01-01
 input:
     - name : UniqueName 

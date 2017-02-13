@@ -1,4 +1,4 @@
-brief: 获取配置
+brief: 获取域名级别配置
 method: get
 version: 2017-01-01
 input:

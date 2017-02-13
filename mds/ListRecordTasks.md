@@ -1,8 +1,8 @@
-# 获取app/pubhost的录像任务情况(ListRecordTasks)
+# 获取流级别的录像任务情况(ListRecordTasks)
 
 ## 描述
 
-获取app/pubhost的录像任务情况
+获取流级别的录像任务情况
 
 ## 请求参数
 
