@@ -1,0 +1,21 @@
+package param
+
+
+type T_req_{{data.action}}{
+{% for param in data.input %}    {{param.name}} {{param.type | default: "string"}} `form:"{{param.name}}" {% if param.valid %} valid:"{{param.valid}}" {% endif %}`
+{% endfor %}
+}
+
+{% if data.gen_go %}
+type T_rsp_{{data.action}}{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        {% for param in data.output %}{{param.name}} {{param.type | default: "string"}} `json:"omitempty"` 
+        {% endfor %}
+    }
+}
+{%endif%}
+
+
+

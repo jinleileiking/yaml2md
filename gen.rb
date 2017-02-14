@@ -32,7 +32,13 @@ def get_val(input_item)
 end
 
 
-
+def get_valid(input_item)
+	if input_item["must"] == "N"
+    else
+        # input_item["valid"] = ' valid:"Required"'
+        input_item["valid"] = true
+    end
+end 
 
 
 opts = Trollop::options do
@@ -65,6 +71,7 @@ data["method"] = "POST" unless data["method"]
 if data["input"]
 	data["input"].each do |item| 
 		get_val(item)
+        get_valid(item)
 	end
 end
 
@@ -75,6 +82,17 @@ if data["output"]
 end
 
 
+@gen_go = true
+
+# if has array, do not gen rsp
+if data["output"]
+	data["output"].each do |item| 
+        next unless item["type"]
+		if item["type"] == "Array" 
+            @gen_go = false
+        end
+	end
+end
 
 data["detail"] = data["brief"] unless data["detail"]
 
@@ -84,3 +102,8 @@ template = Liquid::Template.parse(template_file)
 out = template.render('data' => data)
 print out
 
+data["gen_rsp"] = @gen_go
+template_file  = File.read("golang_tpl.liquid")
+template = Liquid::Template.parse(template_file)
+out = template.render('data' => data)
+File.open("go/#{filename}.go", 'w') { |file| file.write(out) }
