@@ -13,7 +13,14 @@ type T_req_UpdateRecordConfig{
 
 }
 
-
+type T_rsp_UpdateRecordConfig{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        
+        
+    }
+}
 
 
 

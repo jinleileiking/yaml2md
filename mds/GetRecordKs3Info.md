@@ -37,3 +37,21 @@
 ```
 ```
 
+{"brief"=>"获取流生成ks3路径的文件名",
+ "method"=>"get",
+ "version"=>#<Date: 2017-01-01 ((2457755j,0s,0n),+0s,2299161j)>,
+ "input"=>
+  [{"name"=>"UniqueName",
+    "require"=>"[a-zA-Z0-9-]",
+    "comment"=>"域名标识",
+    "valid"=>true},
+   {"name"=>"App", "require"=>"[a-zA-Z0-9-]", "comment"=>"app", "valid"=>true},
+   {"name"=>"Pubdomain", "valid"=>true},
+   {"name"=>"Stream", "valid"=>true},
+   {"name"=>"UnixTime", "valid"=>true},
+   {"name"=>"Vdoid", "valid"=>true}],
+ "output"=>
+  [{"name"=>"LiveFileNameM3U8", "comment"=>"直播实时更新的m3u8文件名，参加命名方式，必须带vdoid"},
+   {"name"=>"PhraseFileNameMp4"}],
+ "action"=>"GetRecordKs3Info",
+ "detail"=>"获取流生成ks3路径的文件名"}

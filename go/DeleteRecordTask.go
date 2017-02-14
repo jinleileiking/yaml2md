@@ -10,7 +10,14 @@ type T_req_DeleteRecordTask{
 
 }
 
-
+type T_rsp_DeleteRecordTask{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        
+        
+    }
+}
 
 
 

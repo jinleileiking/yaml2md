@@ -7,7 +7,14 @@ type T_req_UpdateM3U8Merge{
 
 }
 
-
+type T_rsp_UpdateM3U8Merge{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        
+        
+    }
+}
 
 
 

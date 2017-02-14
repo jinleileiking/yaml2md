@@ -6,16 +6,16 @@ type T_req_{{data.action}}{
 {% endfor %}
 }
 
-{% if data.gen_go %}
 type T_rsp_{{data.action}}{
     Data struct {
         RetCode   int
         RetMsg    string
-        {% for param in data.output %}{{param.name}} {{param.type | default: "string"}} `json:"omitempty"` 
+        {% for param in data.output %}{% if param.type == 'Array' %}{{param.name}} struct {
+        {% continue %}{% endif %}{{param.name}} {{param.type | default: "string"}} `json:"omitempty"` 
         {% endfor %}
+        {% if data.has_array %}}{% endif %}
     }
 }
-{%endif%}
 
 
 

@@ -10,7 +10,14 @@ type T_req_StopStreamRecord{
 
 }
 
-
+type T_rsp_StopStreamRecord{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        
+        
+    }
+}
 
 
 

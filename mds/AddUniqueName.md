@@ -30,3 +30,13 @@
 ```
 ```
 
+{"brief"=>"添加域名标识",
+ "detail"=>"添加域名标识",
+ "method"=>"post",
+ "version"=>#<Date: 2017-01-01 ((2457755j,0s,0n),+0s,2299161j)>,
+ "input"=>
+  [{"name"=>"UniqueName",
+    "require"=>"[a-zA-Z0-9-]",
+    "comment"=>"域名标识",
+    "valid"=>true}],
+ "action"=>"AddUniqueName"}

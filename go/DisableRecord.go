@@ -8,7 +8,14 @@ type T_req_DisableRecord{
 
 }
 
-
+type T_rsp_DisableRecord{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        
+        
+    }
+}
 
 
 

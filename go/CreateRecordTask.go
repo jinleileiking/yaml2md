@@ -14,7 +14,15 @@ type T_req_CreateRecordTask{
 
 }
 
-
+type T_rsp_CreateRecordTask{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        RecID string `json:"omitempty"` 
+        
+        
+    }
+}
 
 
 

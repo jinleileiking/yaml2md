@@ -6,7 +6,14 @@ type T_req_AddUniqueName{
 
 }
 
-
+type T_rsp_AddUniqueName{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        
+        
+    }
+}
 
 
 

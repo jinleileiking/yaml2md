@@ -6,7 +6,14 @@ type T_req_CreateM3U8Merge{
 
 }
 
-
+type T_rsp_CreateM3U8Merge{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        
+        
+    }
+}
 
 
 

@@ -12,7 +12,15 @@ type T_req_StartStreamRecord{
 
 }
 
-
+type T_rsp_StartStreamRecord{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        RecID string `json:"omitempty"` 
+        
+        
+    }
+}
 
 
 

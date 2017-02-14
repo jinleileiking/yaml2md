@@ -11,7 +11,16 @@ type T_req_GetRecordKs3Info{
 
 }
 
-
+type T_rsp_GetRecordKs3Info{
+    Data struct {
+        RetCode   int
+        RetMsg    string
+        LiveFileNameM3U8 string `json:"omitempty"` 
+        PhraseFileNameMp4 string `json:"omitempty"` 
+        
+        
+    }
+}
 
 
 

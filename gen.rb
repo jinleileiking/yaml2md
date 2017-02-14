@@ -82,14 +82,14 @@ if data["output"]
 end
 
 
-@gen_go = true
+@has_array = false
 
 # if has array, do not gen rsp
 if data["output"]
 	data["output"].each do |item| 
         next unless item["type"]
 		if item["type"] == "Array" 
-            @gen_go = false
+            @has_array = true
         end
 	end
 end
@@ -102,7 +102,11 @@ template = Liquid::Template.parse(template_file)
 out = template.render('data' => data)
 print out
 
-data["gen_rsp"] = @gen_go
+
+pp data
+
+
+data["has_array"] = @has_array
 template_file  = File.read("golang_tpl.liquid")
 template = Liquid::Template.parse(template_file)
 out = template.render('data' => data)

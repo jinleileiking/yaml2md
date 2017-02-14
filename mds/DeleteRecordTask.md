@@ -34,3 +34,21 @@
 ```
 ```
 
+{"brief"=>"删除录制视频定时任务",
+ "method"=>"put",
+ "version"=>#<Date: 2017-01-01 ((2457755j,0s,0n),+0s,2299161j)>,
+ "input"=>
+  [{"name"=>"UniqueName",
+    "require"=>"[a-zA-Z0-9-]",
+    "comment"=>"域名标识",
+    "valid"=>true},
+   {"name"=>"App", "require"=>"[a-zA-Z0-9-]", "comment"=>"app", "valid"=>true},
+   {"name"=>"Pubdomain", "valid"=>true},
+   {"name"=>"Stream", "valid"=>true},
+   {"name"=>"RecID",
+    "require"=>"[a-zA-Z0-9-]",
+    "comment"=>"录像id",
+    "valid"=>true}],
+ "output"=>nil,
+ "action"=>"DeleteRecordTask",
+ "detail"=>"删除录制视频定时任务"}

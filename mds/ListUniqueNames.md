@@ -30,3 +30,13 @@
 ```
 ```
 
+{"brief"=>"获取域名标识",
+ "method"=>"get",
+ "version"=>#<Date: 2017-01-01 ((2457755j,0s,0n),+0s,2299161j)>,
+ "input"=>nil,
+ "output"=>
+  [{"name"=>"UniqueNames",
+    "type"=>"String Array",
+    "comment"=>"返回UniqueName数组"}],
+ "action"=>"ListUniqueNames",
+ "detail"=>"获取域名标识"}
